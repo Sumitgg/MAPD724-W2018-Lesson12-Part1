@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var Latitude: UITextField!
     @IBOutlet weak var Longitude: UITextField!
+    @IBOutlet weak var magText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +24,12 @@ class ViewController: UIViewController {
         let reg = MKCoordinateRegionMake(loc, span)
         self.map.region = reg
         
-        let ann = MKPointAnnotation()
+       /* let ann = MKPointAnnotation()
         ann.coordinate = self.mapLocation
         ann.title = "Toronto"
         ann.subtitle = "A place that's really cool"
         self.map.addAnnotation(ann)
+      */
     }
 
     @IBAction func seeInMapApp(_ sender: UIButton) {
@@ -47,14 +49,15 @@ class ViewController: UIViewController {
     @IBAction func onSearch(_ sender: UIButton) {
         let myLong = Double( self.Longitude.text!)
         let myLat = Double( self.Latitude.text!)
-        let loc = CLLocationCoordinate2D(latitude: myLat!, longitude: myLong!);
-        
-        let span = MKCoordinateSpanMake(delta, delta)
+        let mag = Double(self.magText.text!)
+        let mapLocation = CLLocationCoordinate2DMake(myLat!, myLong!)
+        let loc = CLLocationCoordinate2D(latitude: CLLocationDegrees(myLat!), longitude: CLLocationDegrees(myLong!))
+        let span = MKCoordinateSpanMake(CLLocationDegrees(mag!), CLLocationDegrees(mag!))
         let reg = MKCoordinateRegionMake(loc, span)
         self.map.region = reg
         
         let ann = MKPointAnnotation()
-        ann.coordinate = loc
+        ann.coordinate = mapLocation
         ann.title = "Result Place"
         ann.subtitle = "Wonder where I am"
         self.map.addAnnotation(ann)
