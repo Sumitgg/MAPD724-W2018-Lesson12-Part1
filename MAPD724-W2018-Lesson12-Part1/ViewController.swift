@@ -45,7 +45,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onSearch(_ sender: UIButton) {
-      
+        let myLong = Double( self.Longitude.text!)
+        let myLat = Double( self.Latitude.text!)
+        let loc = CLLocationCoordinate2D(latitude: myLat!, longitude: myLong!);
+        
+        let span = MKCoordinateSpanMake(delta, delta)
+        let reg = MKCoordinateRegionMake(loc, span)
+        self.map.region = reg
+        
+        let ann = MKPointAnnotation()
+        ann.coordinate = loc
+        ann.title = "Result Place"
+        ann.subtitle = "Wonder where I am"
+        self.map.addAnnotation(ann)
         
     }
     
