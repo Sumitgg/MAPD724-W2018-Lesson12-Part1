@@ -55,6 +55,7 @@ class ViewController: UIViewController {
         let span = MKCoordinateSpanMake(CLLocationDegrees(mag!), CLLocationDegrees(mag!))
         let reg = MKCoordinateRegionMake(loc, span)
         self.map.region = reg
+       
         
         let ann = MKPointAnnotation()
         ann.coordinate = mapLocation
