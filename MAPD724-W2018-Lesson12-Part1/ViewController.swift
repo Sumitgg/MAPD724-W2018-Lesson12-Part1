@@ -9,9 +9,12 @@ class ViewController: UIViewController {
     // To fix
     let lat = 43.6532
     let long =  -79.3832
-    var delta = 5.0
+    var delta = 0.5
     let mapLocation = CLLocationCoordinate2DMake(43.6532, -79.3832)
 
+    @IBOutlet weak var Latitude: UITextField!
+    @IBOutlet weak var Longitude: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,9 +31,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func seeInMapApp(_ sender: UIButton) {
-        let placemark = MKPlacemark(coordinate: self.mapLocation, addressDictionary: nil)
+        let placemark = MKPlacemark(coordinate: self.map.centerCoordinate, addressDictionary: nil)
         let mapitem = MKMapItem(placemark: placemark)
-        mapitem.name = "A really icy place"
+        mapitem.name = "Wonder where I am"
         
         // opens our location in the map app
         mapitem.openInMaps(launchOptions:[
@@ -41,5 +44,11 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func onSearch(_ sender: UIButton) {
+      
+        
+    }
+    
 }
+
 

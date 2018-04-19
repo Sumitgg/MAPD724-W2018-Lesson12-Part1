@@ -22,28 +22,19 @@
                                 <rect key="frame" x="16" y="145" width="343" height="448"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N38-BE-wwr">
-                                <rect key="frame" x="43" y="20" width="114" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="114" id="uod-S5-C5a"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOp-bo-0qP">
-                                <rect key="frame" x="229" y="20" width="130" height="21"/>
+                                <rect key="frame" x="35" y="20" width="114" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ei-rD-OQS">
-                                <rect key="frame" x="206" y="49" width="153" height="30"/>
+                                <rect key="frame" x="206" y="57" width="153" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yh6-Sm-rSp">
-                                <rect key="frame" x="16" y="49" width="153" height="30"/>
+                                <rect key="frame" x="24" y="57" width="153" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -51,6 +42,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIP-zZ-MQS">
                                 <rect key="frame" x="206" y="98" width="153" height="30"/>
                                 <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="onSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GQQ-Au-9u2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4r-g2-j0Y">
                                 <rect key="frame" x="16" y="617" width="111" height="30"/>
@@ -59,34 +53,43 @@
                                     <action selector="seeInMapApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Odi-A0-0Yv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOp-bo-0qP">
+                                <rect key="frame" x="217" y="20" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ord-xg-XN4" firstAttribute="leading" secondItem="O4r-g2-j0Y" secondAttribute="leading" id="4cN-j9-DJE"/>
-                            <constraint firstItem="7ei-rD-OQS" firstAttribute="leading" secondItem="Yh6-Sm-rSp" secondAttribute="trailing" constant="37" id="6Qh-3d-wPm"/>
-                            <constraint firstItem="N38-BE-wwr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="HIE-Eh-oKr"/>
-                            <constraint firstItem="7ei-rD-OQS" firstAttribute="trailing" secondItem="TIP-zZ-MQS" secondAttribute="trailing" id="Jtg-Ei-ekm"/>
-                            <constraint firstItem="TIP-zZ-MQS" firstAttribute="top" secondItem="7ei-rD-OQS" secondAttribute="bottom" constant="19" id="Mmv-0M-dYy"/>
-                            <constraint firstItem="TIP-zZ-MQS" firstAttribute="trailing" secondItem="Ord-xg-XN4" secondAttribute="trailing" id="RCB-oC-xK8"/>
-                            <constraint firstItem="Ord-xg-XN4" firstAttribute="top" secondItem="TIP-zZ-MQS" secondAttribute="bottom" constant="17" id="Vug-TK-vNx"/>
-                            <constraint firstItem="hOp-bo-0qP" firstAttribute="trailing" secondItem="7ei-rD-OQS" secondAttribute="trailing" id="Z30-Sy-w7S"/>
-                            <constraint firstItem="Yh6-Sm-rSp" firstAttribute="leading" secondItem="Ord-xg-XN4" secondAttribute="leading" id="Z6d-tG-Ite"/>
-                            <constraint firstItem="Yh6-Sm-rSp" firstAttribute="top" secondItem="N38-BE-wwr" secondAttribute="bottom" constant="8" symbolic="YES" id="a2E-Na-wRY"/>
-                            <constraint firstItem="hOp-bo-0qP" firstAttribute="leading" secondItem="N38-BE-wwr" secondAttribute="trailing" constant="72" id="brE-B7-DmK"/>
-                            <constraint firstItem="O4r-g2-j0Y" firstAttribute="top" secondItem="Ord-xg-XN4" secondAttribute="bottom" constant="24" id="fVw-M2-IOj"/>
-                            <constraint firstItem="TIP-zZ-MQS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="206" id="gBz-OB-fHx"/>
-                            <constraint firstItem="hOp-bo-0qP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hbT-u9-8dB"/>
-                            <constraint firstItem="N38-BE-wwr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iwv-75-V4K"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O4r-g2-j0Y" secondAttribute="trailing" constant="248" id="lIy-3e-CHr"/>
-                            <constraint firstItem="7ei-rD-OQS" firstAttribute="leading" secondItem="TIP-zZ-MQS" secondAttribute="leading" id="mMG-so-ytI"/>
-                            <constraint firstItem="Yh6-Sm-rSp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="q2k-MR-qY4"/>
-                            <constraint firstItem="Yh6-Sm-rSp" firstAttribute="baseline" secondItem="7ei-rD-OQS" secondAttribute="baseline" id="vCM-I3-A9b"/>
-                            <constraint firstItem="N38-BE-wwr" firstAttribute="baseline" secondItem="hOp-bo-0qP" secondAttribute="baseline" id="yjy-ef-M1C"/>
-                            <constraint firstAttribute="bottom" secondItem="O4r-g2-j0Y" secondAttribute="bottom" constant="20" symbolic="YES" id="z5v-ww-Tyc"/>
+                            <constraint firstItem="Ord-xg-XN4" firstAttribute="leading" secondItem="O4r-g2-j0Y" secondAttribute="leading" id="0St-cp-hJO"/>
+                            <constraint firstItem="O4r-g2-j0Y" firstAttribute="top" secondItem="Ord-xg-XN4" secondAttribute="bottom" constant="24" id="6Ti-n6-xSt"/>
+                            <constraint firstItem="7ei-rD-OQS" firstAttribute="leading" secondItem="TIP-zZ-MQS" secondAttribute="leading" id="92z-XA-13r"/>
+                            <constraint firstItem="TIP-zZ-MQS" firstAttribute="top" secondItem="7ei-rD-OQS" secondAttribute="bottom" constant="11" id="CH6-hE-6gI"/>
+                            <constraint firstItem="N38-BE-wwr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="HNQ-Zj-UC8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O4r-g2-j0Y" secondAttribute="trailing" constant="248" id="MeE-ts-zKZ"/>
+                            <constraint firstItem="N38-BE-wwr" firstAttribute="baseline" secondItem="hOp-bo-0qP" secondAttribute="baseline" id="O31-Ej-Whj"/>
+                            <constraint firstItem="TIP-zZ-MQS" firstAttribute="trailing" secondItem="Ord-xg-XN4" secondAttribute="trailing" id="QRR-zv-M34"/>
+                            <constraint firstItem="Ord-xg-XN4" firstAttribute="top" secondItem="TIP-zZ-MQS" secondAttribute="bottom" constant="17" id="T2g-qY-SOX"/>
+                            <constraint firstItem="hOp-bo-0qP" firstAttribute="leading" secondItem="N38-BE-wwr" secondAttribute="trailing" constant="68" id="TZ4-C5-cbF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hOp-bo-0qP" secondAttribute="trailing" constant="28" id="VMD-Ae-f7w"/>
+                            <constraint firstAttribute="bottom" secondItem="O4r-g2-j0Y" secondAttribute="bottom" constant="20" symbolic="YES" id="auG-uD-gyI"/>
+                            <constraint firstItem="Ord-xg-XN4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bKK-QT-PXk"/>
+                            <constraint firstItem="TIP-zZ-MQS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="206" id="glq-SX-gcV"/>
+                            <constraint firstItem="N38-BE-wwr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iGz-Vw-hnn"/>
+                            <constraint firstItem="Yh6-Sm-rSp" firstAttribute="top" secondItem="N38-BE-wwr" secondAttribute="bottom" constant="16" id="mMD-F5-M3S"/>
+                            <constraint firstItem="7ei-rD-OQS" firstAttribute="trailing" secondItem="TIP-zZ-MQS" secondAttribute="trailing" id="rSj-w3-dzG"/>
+                            <constraint firstItem="7ei-rD-OQS" firstAttribute="leading" secondItem="Yh6-Sm-rSp" secondAttribute="trailing" constant="29" id="sSr-B6-Eaj"/>
+                            <constraint firstItem="hOp-bo-0qP" firstAttribute="centerX" secondItem="7ei-rD-OQS" secondAttribute="centerX" id="t6a-tY-iwJ"/>
+                            <constraint firstItem="7ei-rD-OQS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xpR-Zt-FEK"/>
+                            <constraint firstItem="Yh6-Sm-rSp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="yft-2S-C5E"/>
+                            <constraint firstItem="Yh6-Sm-rSp" firstAttribute="baseline" secondItem="7ei-rD-OQS" secondAttribute="baseline" id="zqk-Uu-1UW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="Latitude" destination="Yh6-Sm-rSp" id="OCA-TV-eVx"/>
+                        <outlet property="Longitude" destination="7ei-rD-OQS" id="i9f-2T-Y7v"/>
                         <outlet property="map" destination="Ord-xg-XN4" id="c5h-iA-kuC"/>
                     </connections>
                 </viewController>
